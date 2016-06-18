@@ -1,0 +1,70 @@
+﻿using CapaNegocio;
+using System;
+using System.Windows.Forms;
+
+namespace CapaPresentacion
+{
+    public partial class frmMarcarEntregado : Form
+    {
+        private Pedidos _owner;
+
+        public frmMarcarEntregado()
+        {
+            InitializeComponent();
+        }
+
+        public frmMarcarEntregado(Pedidos owner)
+        {
+            this._owner = owner;
+            InitializeComponent();
+            this.labelNombre.Text = String.Format("¿Cuándo fue entregado el Pedido {0} ordenado el {1}?",
+                this._owner.ObtenerSeleccionPedidos().Cells[2].Value.ToString(),
+                Convert.ToDateTime(this._owner.ObtenerSeleccionPedidos().Cells[6].Value).ToString("dd/MM/yyyy"));
+            this.textBoxHoy.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void buttonHoy_Click(object sender, EventArgs e)
+        {
+            String mensaje = "";
+
+            mensaje = NPedidos.MarcarEntregadoPendiente(
+                Convert.ToInt32(this._owner.ObtenerSeleccionPedidos().Cells[1].Value),
+                DateTime.Now.ToString("dd/MM/yyyy"));
+
+            if (mensaje == "Y")
+            {
+                this._owner.Mensaje(String.Format("El Pedido {0} para {1} ha sido marcado como ENTREGADO",
+                    this._owner.ObtenerSeleccionPedidos().Cells[2].Value.ToString(),
+                    this._owner.ObtenerSeleccionPedidos().Cells[3].Value.ToString()));
+                this._owner.Refrescar();
+                this.Close();
+            }
+            else
+            {
+                this._owner.MensajeError(mensaje);
+            }
+        }
+
+        private void buttonFecha_Click(object sender, EventArgs e)
+        {
+            String mensaje = "";
+
+            mensaje = NPedidos.MarcarEntregadoPendiente(
+                Convert.ToInt32(this._owner.ObtenerSeleccionPedidos().Cells[1].Value),
+                this.dateTimePickerMarcarFecha.Value.ToString("dd/MM/yyyy"));
+
+            if (mensaje == "Y")
+            {
+                this._owner.Mensaje(String.Format("El Pedido {0} para {1} ha sido marcado como ENTREGADO",
+                    this._owner.ObtenerSeleccionPedidos().Cells[2].Value.ToString(),
+                    this._owner.ObtenerSeleccionPedidos().Cells[3].Value.ToString()));
+                this._owner.Refrescar();
+                this.Close();
+            }
+            else
+            {
+                this._owner.MensajeError(mensaje);
+            }
+        }
+    }
+}

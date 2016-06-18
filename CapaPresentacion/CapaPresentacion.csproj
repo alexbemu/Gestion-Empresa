@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0ABE7260-7FAB-46EC-B06D-BCB6AEF3197E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Categorias.designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clientes.designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Empleados.designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarNuevaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarNuevaCategoria.designer.cs">
+      <DependentUpon>frmAgregarNuevaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarNuevoCliente.designer.cs">
+      <DependentUpon>frmAgregarNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarNuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarNuevoEmpleado.designer.cs">
+      <DependentUpon>frmAgregarNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarNuevoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarNuevoPedido.designer.cs">
+      <DependentUpon>frmAgregarNuevoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarNuevoProducto.designer.cs">
+      <DependentUpon>frmAgregarNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarNuevoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarNuevoTransporte.designer.cs">
+      <DependentUpon>frmAgregarNuevoTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarCategoria.designer.cs">
+      <DependentUpon>frmEditarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarCliente.designer.cs">
+      <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarEmpleado.designer.cs">
+      <DependentUpon>frmEditarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarPedidoEntregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarPedidoEntregado.designer.cs">
+      <DependentUpon>frmEditarPedidoEntregado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarPedidoPendiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarPedidoPendiente.designer.cs">
+      <DependentUpon>frmEditarPedidoPendiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarProducto.designer.cs">
+      <DependentUpon>frmEditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarTransporte.designer.cs">
+      <DependentUpon>frmEditarTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarcarEntregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarcarEntregado.designer.cs">
+      <DependentUpon>frmMarcarEntregado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarcarPendiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarcarPendiente.designer.cs">
+      <DependentUpon>frmMarcarPendiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPedidoEntregadoDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPedidoEntregadoDetalles.designer.cs">
+      <DependentUpon>frmPedidoEntregadoDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPedidoPendienteDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPedidoPendienteDetalles.designer.cs">
+      <DependentUpon>frmPedidoPendienteDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pedidos.designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Productos.designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transporte.designer.cs">
+      <DependentUpon>Transporte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarNuevaCategoria.resx">
+      <DependentUpon>frmAgregarNuevaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarNuevoCliente.resx">
+      <DependentUpon>frmAgregarNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarNuevoEmpleado.resx">
+      <DependentUpon>frmAgregarNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarNuevoPedido.resx">
+      <DependentUpon>frmAgregarNuevoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarNuevoProducto.resx">
+      <DependentUpon>frmAgregarNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarNuevoTransporte.resx">
+      <DependentUpon>frmAgregarNuevoTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarCategoria.resx">
+      <DependentUpon>frmEditarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarCliente.resx">
+      <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarEmpleado.resx">
+      <DependentUpon>frmEditarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarPedidoEntregado.resx">
+      <DependentUpon>frmEditarPedidoEntregado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarPedidoPendiente.resx">
+      <DependentUpon>frmEditarPedidoPendiente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarProducto.resx">
+      <DependentUpon>frmEditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarTransporte.resx">
+      <DependentUpon>frmEditarTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarcarEntregado.resx">
+      <DependentUpon>frmMarcarEntregado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarcarPendiente.resx">
+      <DependentUpon>frmMarcarPendiente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPedidoEntregadoDetalles.resx">
+      <DependentUpon>frmPedidoEntregadoDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPedidoPendienteDetalles.resx">
+      <DependentUpon>frmPedidoPendienteDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Transporte.resx">
+      <DependentUpon>Transporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{1f98f40e-f767-400e-b61d-231e535e9902}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\actualizar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\agregar_producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\delivery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\editar_producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\eliminar_producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\entregado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\fondo-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\marcarEntregadoPendiente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\pedidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\pendiente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\transporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\youtube.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
